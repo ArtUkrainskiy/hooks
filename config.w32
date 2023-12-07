@@ -1,0 +1,7 @@
+ARG_ENABLE('hooks', 'hooks support', 'no');
+
+if (PHP_HOOKS != 'no') {
+	AC_DEFINE('HAVE_HOOKS', 1, 'hooks support enabled');
+
+	EXTENSION('hooks', 'hooks.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
