@@ -4,7 +4,7 @@ $before = function ($args) {
     print_r($args);
 };
 
-$after = function ($args, $_this = null) {
+$after = function ($args) {
     echo "after function called\n";
     print_r($args);
 };

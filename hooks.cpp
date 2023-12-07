@@ -64,10 +64,7 @@ ZEND_NAMED_FUNCTION(my_hook) {
     for (int i = 1; i <= arg_count; i++) {
         zend_hash_next_index_insert(hooked_args_array, ZEND_CALL_ARG(execute_data, i));
     }
-    // Если есть $this, добавим его к массиву аргкментов
-    if (getThis() != nullptr) {
-        ZVAL_OBJ(&handler_args_zval[1], Z_OBJ_P(getThis()));
-    }
+
     // Подготавливаем массив handler_args_array
     zval hook_name;
     ZVAL_STRING(&hook_name, key.c_str());
