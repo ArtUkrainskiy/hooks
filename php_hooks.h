@@ -4,7 +4,7 @@
 # define PHP_HOOKS_H
 
 #include <string>
-#include <map>
+#include <unordered_map>
 
 extern zend_module_entry hooks_module_entry;
 # define phpext_hooks_ptr &hooks_module_entry
@@ -26,7 +26,7 @@ struct hook_t {
 
 
 ZEND_BEGIN_MODULE_GLOBALS(hooks)
-    std::map<std::string, std::shared_ptr<hook_t>> *originals;
+    std::unordered_map<std::string, std::shared_ptr<hook_t>> *originals;
 ZEND_END_MODULE_GLOBALS(hooks)
 
 
