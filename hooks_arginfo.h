@@ -1,10 +1,12 @@
 /* This is a generated file, edit the .stub.php file instead.
  * Stub hash: 8468ab984d70f5d64aed041fcf47a72e31f653d7 */
 
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_hooks_set_hook, 0, 0, _IS_BOOL, 0)
-	ZEND_ARG_VARIADIC_TYPE_INFO(0, args, IS_MIXED, 0)
+ZEND_BEGIN_ARG_INFO_EX(arginfo_hooks_set_hook, 0, 0, 3)
+                ZEND_ARG_VARIADIC_INFO(0, clazz)
+                ZEND_ARG_INFO(0, function)
+                ZEND_ARG_INFO(0, before)
+                ZEND_ARG_INFO(0, after)
 ZEND_END_ARG_INFO()
-
 
 ZEND_FUNCTION(hooks_set_hook);
 
